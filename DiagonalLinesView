@@ -1,0 +1,55 @@
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.util.AttributeSet;
+import android.view.View;
+
+import androidx.annotation.NonNull;
+
+public class DiagonalLinesView extends View {
+    private Paint linePaint;
+
+    public DiagonalLinesView(Context context) {
+        super(context);
+        init();
+    }
+
+    public DiagonalLinesView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init();
+    }
+
+    public DiagonalLinesView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init();
+    }
+
+    private void init() {
+        linePaint = new Paint();
+        linePaint.setColor(Color.parseColor("#217CF3"));
+        linePaint.setStyle(Paint.Style.STROKE);
+        linePaint.setStrokeWidth(2); // Line thickness
+    }
+
+    @Override
+    protected void onDraw(@NonNull Canvas canvas) {
+        super.onDraw(canvas);
+        int width = getWidth();
+        int height = getHeight();
+        for (int i = 0; i <= (width + height) / 50; i++) {
+            int startX = i * 50;
+            int startY = 0;
+            int endX = 0;
+            int endY = i * 50;
+            canvas.drawLine(startX, startY, endX, endY, linePaint);
+        }
+        for (int i = 0; i <= (width + height) / 50; i++) {
+            int startX = width - i * 50;
+            int startY = 0;
+            int endX = width;
+            int endY = i * 50;
+            canvas.drawLine(startX, startY, endX, endY, linePaint);
+        }
+    }
+}
