@@ -137,11 +137,11 @@ linePaint.setStrokeWidth(2); // Replace with your desired thickness
 ## Example
 Below is an example of a screen using the `DiagonalLinesView` as a background:
 
-![Diagonal Lines Example](https://via.placeholder.com/800x400.png?text=Diagonal+Lines+Example)
+![Diagonal Lines Example](https://github.com/ThingCoder/Diagonal-Lines-Custom-View/blob/main/screenshots/screen.png)
 
 ---
 
 ## Author
 
-Developed by [ThingCoder](https://github.com/your-profile).
+Developed by [ThingCoder](https://github.com/ThingCoder).
 
